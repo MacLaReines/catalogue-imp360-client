@@ -23,7 +23,7 @@ export default function Login() {
     setLoading(true);
     setError(null);
     try {
-      const response = await api.post('/login', { email, password });
+      const response = await api.post('/api/login', { email, password });
       if (response.status === 200) {
         await checkAuth();
         if (response.data.user.role === 'user' || response.data.user.role === 'client') {
