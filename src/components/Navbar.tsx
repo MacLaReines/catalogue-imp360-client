@@ -112,7 +112,7 @@ export default function Navbar() {
 
   useEffect(() => {
     api
-      .get('/me')
+      .get('/api/me')
       .then((res) => setUser(res.data.user))
       .catch(() => setUser(null))
       .finally(() => setLoading(false));

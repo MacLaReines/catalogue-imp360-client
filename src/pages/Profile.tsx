@@ -61,7 +61,7 @@ export default function Profile() {
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const response = await api.get('/me');
+        const response = await api.get('/api/me');
         setProfile(response.data);
       } catch (error) {
         console.error('Erreur lors du chargement du profil:', error);
@@ -122,7 +122,7 @@ export default function Profile() {
         companyId: selectedCompanyId,
       });
 
-      const response = await api.get('/me');
+      const response = await api.get('/api/me');
       setProfile(response.data);
 
       showNotification({
